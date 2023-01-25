@@ -67,5 +67,5 @@ buck-out/
 ios/tmp.xcconfig
 
 # project
-yarn.lock
 .env.development
+yarn.lock

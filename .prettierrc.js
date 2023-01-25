@@ -8,6 +8,5 @@ module.exports = {
   "semi": true,
   "quoteProps": "as-needed",
   "bracketSpacing": true,
-  "jsxBracketSameLine": false,
   "endOfLine": "lf"
 };
