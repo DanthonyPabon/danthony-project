@@ -1,0 +1,105 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/Gilroy-Black.otf",
+      "sha1": "ebd62fe64a60acbc6b8983f299094c6c8ed9b9a3"
+    },
+    {
+      "path": "src/assets/fonts/Gilroy-BlackItalic.otf",
+      "sha1": "da8a7a6e80d8e857983f74207bc665257a965c4e"
+    },
+    {
+      "path": "src/assets/fonts/Gilroy-Bold.otf",
+      "sha1": "cc48618e85ee059e2018fe75f14996d0aca5663f"
+    },
+    {
+      "path": "src/assets/fonts/Gilroy-BoldItalic.otf",
+      "sha1": "d425f287a304cdf684cdad68bd22f1d35981dfd6"
+    },
+    {
+      "path": "src/assets/fonts/Gilroy-ExtraBold.otf",
+      "sha1": "14148f0345ef57bc493496224d07e4179a12e7f5"
+    },
+    {
+      "path": "src/assets/fonts/Gilroy-ExtraBoldItalic.otf",
+      "sha1": "903a4374ebb0bdbbcf67380723de008de0bbca0f"
+    },
+    {
+      "path": "src/assets/fonts/Gilroy-Heavy.otf",
+      "sha1": "1b4e2b1dcd20c9c44361f866ee8ff67f21fd13a2"
+    },
+    {
+      "path": "src/assets/fonts/Gilroy-HeavyItalic.otf",
+      "sha1": "04469637706a0b71b14c6fcd3ed880b87e63fd45"
+    },
+    {
+      "path": "src/assets/fonts/Gilroy-Light.otf",
+      "sha1": "7cdf0cd56ca47385f56885924f47084f89e4d1a4"
+    },
+    {
+      "path": "src/assets/fonts/Gilroy-LightItalic.otf",
+      "sha1": "d91dec756d9f5bc4e120ce6227a3b9ab45cfba08"
+    },
+    {
+      "path": "src/assets/fonts/Gilroy-Medium.otf",
+      "sha1": "837d356aa69ec1792ec2044e5d741c65734cd63a"
+    },
+    {
+      "path": "src/assets/fonts/Gilroy-MediumItalic.otf",
+      "sha1": "d067279cdfc93f5ba7218c7d65bb61dc6a3a1611"
+    },
+    {
+      "path": "src/assets/fonts/Gilroy-Regular.otf",
+      "sha1": "262b26f8d092f051036850f7149072fe6567b407"
+    },
+    {
+      "path": "src/assets/fonts/Gilroy-RegularItalic.otf",
+      "sha1": "67d434a89ba8d7775af7531dbee2e9f843fa9598"
+    },
+    {
+      "path": "src/assets/fonts/Gilroy-SemiBold.otf",
+      "sha1": "53f4b525f46858dc54466a40ba32f145986a6648"
+    },
+    {
+      "path": "src/assets/fonts/Gilroy-SemiBoldItalic.otf",
+      "sha1": "6ad36781c1884fd384405925ab40adf42e144de5"
+    },
+    {
+      "path": "src/assets/fonts/Gilroy-Thin.otf",
+      "sha1": "5ab6f0ff821fbfd225716302a0042dc71734bd16"
+    },
+    {
+      "path": "src/assets/fonts/Gilroy-ThinItalic.otf",
+      "sha1": "fbe73a5608f070d031644302613c526bfb709b87"
+    },
+    {
+      "path": "src/assets/fonts/Gilroy-UltraLight.otf",
+      "sha1": "4f1acacd8f6052d28f4a70898668658143b1c150"
+    },
+    {
+      "path": "src/assets/fonts/Gilroy-UltraLightItalic.otf",
+      "sha1": "7b3ea2a6ccc1b39a1b4964e26a9e9d08a9a009fc"
+    },
+    {
+      "path": "src/assets/fonts/OverpassMono-Bold.ttf",
+      "sha1": "925addcc20b66c8546a48ea9787a923401d2c392"
+    },
+    {
+      "path": "src/assets/fonts/OverpassMono-Light.ttf",
+      "sha1": "7352fd033d71ec3f91cf89d53d3d5c01bbc3da24"
+    },
+    {
+      "path": "src/assets/fonts/OverpassMono-Regular.ttf",
+      "sha1": "c8ecef37a163ec143df9d88f2e291e45c7040aed"
+    },
+    {
+      "path": "src/assets/fonts/OverpassMono-SemiBold.ttf",
+      "sha1": "eb94131fa637b168bcf1de907ec4b2d8bfd329f6"
+    },
+    {
+      "path": "src/assets/fonts/fonts.ts",
+      "sha1": "9fb8a346247d2888ac3a86db9b0b5f6f4c423fc6"
+    }
+  ]
+}
