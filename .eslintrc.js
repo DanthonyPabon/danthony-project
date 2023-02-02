@@ -22,12 +22,13 @@ module.exports = {
     sourceType: "module",
   },
   plugins: [
-    "@typescript-eslint",
-    "module-resolver",
-    "import",
     "react",
     "react-native",
+    "@typescript-eslint",
+    "module-resolver",
     "prettier",
+    "import",
+    "sort-keys-fix",
   ],
   overrides: [
     {
@@ -45,6 +46,8 @@ module.exports = {
         "arrow-body-style": "off",
         complexity: ["warn", { max: 4 }],
         "prefer-arrow-callback": "off",
+        "sort-keys": "warn",
+        "sort-keys-fix/sort-keys-fix": "warn",
         "import/newline-after-import": ["error", { count: 1 }],
         "import/no-anonymous-default-export": [
           "warn",
@@ -77,7 +80,6 @@ module.exports = {
             ],
           },
         ],
-        "sort-keys": "warn",
         "@typescript-eslint/indent": ["error", 2],
       },
     },
