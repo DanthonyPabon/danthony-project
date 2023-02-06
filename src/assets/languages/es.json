@@ -1,4 +1,9 @@
 {
-  "hello": "Hola Mundo",
-  "change": "Cambiar idioma"
+  "welcome": "Bienvenido",
+  "welcomeMessage": "Vamos a relajarnos y buscar tus películas favoritas!",
+  "searchMovie": "Buscar películas...",
+  "categories": "Categorías",
+  "latestMovie": "Últimos estrenos",
+  "favoriteMovie": "Películas favoritas",
+  "viewAll": "Ver todo"
 }

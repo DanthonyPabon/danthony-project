@@ -1,4 +1,9 @@
 {
-  "hello": "Hello world",
-  "change": "Change language"
+  "welcome": "Welcome",
+  "welcomeMessage": "Let's relax and look for your favorite movies!",
+  "searchMovie": "Search movies...",
+  "categories": "Categories",
+  "latestMovie": "Latest Movie",
+  "favoriteMovie": "Favorite Movie",
+  "viewAll": "View all"
 }
