@@ -22,6 +22,7 @@ const renderImage = (urlImage: string) => {
       style={styles.image}
       source={{ uri: urlImage }}
       resizeMode={FastImage.resizeMode.stretch}
+      testID="fast-image"
     />
   );
 };

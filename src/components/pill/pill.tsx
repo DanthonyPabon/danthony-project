@@ -18,6 +18,7 @@ const Pill = ({ title, colors }: IPillProps) => {
   return (
     <View
       style={[styles.container, { backgroundColor: colors.backgroundPill }]}
+      testID="pill"
     >
       <Option colors={colors} txt={title} />
     </View>
