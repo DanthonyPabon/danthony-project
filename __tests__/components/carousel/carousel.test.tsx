@@ -27,6 +27,8 @@ describe("Carousel component test", () => {
   });
 
   test("Check flatlist", () => {
-    screen.getByTestId("flatlist-carousel").props;
+    expect(screen.getByTestId("flatlist-carousel").props.data).toEqual([
+      movieItem,
+    ]);
   });
 });
