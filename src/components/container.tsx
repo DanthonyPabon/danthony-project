@@ -9,7 +9,7 @@ interface IDarkMode {
   backgroundColor: string;
 }
 
-const styles = (safeAreaInsets: EdgeInsets, darkMode: IDarkMode) =>
+const style = (safeAreaInsets: EdgeInsets, darkMode: IDarkMode) =>
   StyleSheet.create({
     content: {
       backgroundColor: darkMode.backgroundColor,
@@ -23,7 +23,7 @@ const styles = (safeAreaInsets: EdgeInsets, darkMode: IDarkMode) =>
 const Container = ({
   children,
   withScroll = false,
-  style = {},
+  styles = {},
   colors,
 }: IContainer) => {
   const safeAreaInsets = useSafeAreaInsets();
@@ -34,13 +34,17 @@ const Container = ({
 
   return withScroll ? (
     <ScrollView
-      style={[styles(safeAreaInsets, backgroundStyle).content, style]}
+      style={[style(safeAreaInsets, backgroundStyle).content, styles]}
       contentContainerStyle={{ paddingBottom: safeAreaInsets.bottom * 3 }}
+      testID="container-scroll"
     >
       {children}
     </ScrollView>
   ) : (
-    <View style={[styles(safeAreaInsets, backgroundStyle).content, style]}>
+    <View
+      style={[style(safeAreaInsets, backgroundStyle).content, styles]}
+      testID="container"
+    >
       {children}
     </View>
   );

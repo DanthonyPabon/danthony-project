@@ -1,5 +1,5 @@
 import SearchSVG from "assets/icons/search";
-import React from "react";
+import React, { useState } from "react";
 import { StyleSheet, TextInput, View } from "react-native";
 import dimensions from "styles/dimensions";
 import { ISearchInput } from "types/components";
@@ -15,10 +15,17 @@ const styles = StyleSheet.create({
   },
 });
 
-const SearchInput = ({ colors, ...props }: ISearchInput) => {
+const SearchInput = ({
+  colors,
+  onChangeText,
+  value,
+  ...props
+}: ISearchInput) => {
+  const [search, setSearch] = useState(value);
   return (
     <View
       style={[styles.container, { backgroundColor: colors.backgroundPill }]}
+      testID="container-input"
     >
       <SearchSVG color={colors.iconSearch} colorClass={colors.primary} />
       <TextInput
@@ -27,6 +34,12 @@ const SearchInput = ({ colors, ...props }: ISearchInput) => {
         placeholderTextColor={colors.placeholderTextColor}
         cursorColor={colors.primary}
         autoCapitalize="none"
+        testID="search-input"
+        value={search}
+        onChangeText={(text) => {
+          setSearch(text);
+          if (onChangeText) onChangeText(text);
+        }}
         {...props}
       />
     </View>

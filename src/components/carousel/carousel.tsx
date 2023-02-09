@@ -27,15 +27,20 @@ const Carousel: FunctionComponent<ICarouselProps> = ({
 }) => {
   const renderItem: ListRenderItem<IMovies> = ({ item }) => {
     return (
-      <TouchableOpacity onPress={() => onPress(item)} style={styles.marginR16}>
+      <TouchableOpacity
+        onPress={() => onPress(item)}
+        style={styles.marginR16}
+        testID="press-item"
+      >
         <MovieItem colors={colors} urlImage={item.image} title={item.title} />
       </TouchableOpacity>
     );
   };
 
   return (
-    <View style={styles.content}>
+    <View style={styles.content} testID="container-carousel">
       <FlatList
+        testID="flatlist-carousel"
         data={movies}
         renderItem={renderItem}
         keyExtractor={(item) => item.id.toString()}
