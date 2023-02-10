@@ -46,6 +46,10 @@ const logMessageFormatter = (
       moreInfo = " Unprocurable Entity";
       colorBack = Colors.red;
       break;
+    case 429:
+      moreInfo = " Too Many Requests";
+      colorBack = Colors.yellow;
+      break;
     case 500:
     case 503:
       moreInfo = " Internal Server Error";
