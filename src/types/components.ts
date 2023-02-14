@@ -48,6 +48,8 @@ export interface ITextProps extends ITextStyle {
 
 export interface IPillProps extends ITextStyle {
   title: string;
+  onPress: IFunctionWith<string>;
+  isFocused?: boolean;
 }
 
 export interface IIconSearch extends SvgProps {

@@ -1,6 +1,6 @@
 import Option from "components/text/option";
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { Pressable, StyleSheet } from "react-native";
 import dimensions from "styles/dimensions";
 import { IPillProps } from "types/components";
 
@@ -14,14 +14,22 @@ const styles = StyleSheet.create({
   },
 });
 
-const Pill = ({ title, colors }: IPillProps) => {
+const Pill = ({ title, colors, onPress, isFocused = false }: IPillProps) => {
   return (
-    <View
-      style={[styles.container, { backgroundColor: colors.backgroundPill }]}
+    <Pressable
+      onPress={() => onPress(!isFocused ? title : "")}
+      style={[
+        styles.container,
+        {
+          backgroundColor: isFocused
+            ? colors.backgroundPillFocused
+            : colors.backgroundPill,
+        },
+      ]}
       testID="pill"
     >
       <Option colors={colors} txt={title} />
-    </View>
+    </Pressable>
   );
 };
 

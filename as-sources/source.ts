@@ -1,6 +1,7 @@
 export const colors = {
   background: "#ffffff",
   backgroundPill: "#ebebeb",
+  backgroundPillFocused: "#1FCF7C",
   border: "#1FCF7C",
   button: "#1FCF7C",
   buttonReverse: "#1FCF7C",

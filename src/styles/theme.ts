@@ -4,6 +4,7 @@ import { Colors } from "styles/colors";
 export interface IColors {
   colors: {
     backgroundPill?: string;
+    backgroundPillFocused?: string;
     button?: string;
     buttonReverse?: string;
     error?: string;
@@ -42,6 +43,7 @@ export const theme: ITheme = {
       ...DarkTheme.colors,
       background: Colors.black, // theme B
       backgroundPill: Colors.grey10,
+      backgroundPillFocused: Colors.colorPrimary,
       border: Colors.colorPrimary, // theme B
       button: Colors.colorPrimary,
       buttonReverse: Colors.colorPrimary,
@@ -68,6 +70,7 @@ export const theme: ITheme = {
       ...DefaultTheme.colors,
       background: Colors.white, // theme B
       backgroundPill: Colors.grey80,
+      backgroundPillFocused: Colors.colorPrimary,
       border: Colors.colorPrimary, // theme B
       button: Colors.colorPrimary,
       buttonReverse: Colors.colorPrimary,
