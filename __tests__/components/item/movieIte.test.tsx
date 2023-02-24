@@ -6,6 +6,8 @@ import React from "react";
 import { colors, movieItem } from "../../../as-sources/source";
 
 describe("Movie item component test", () => {
+  const textTest = "The Dark Knight";
+
   beforeEach(() => {
     render(
       <MovieItem
@@ -16,20 +18,20 @@ describe("Movie item component test", () => {
     );
   });
 
-  test("Check text", () => {
-    expect(screen.getByText("The Dark Knight")).toBeVisible();
+  test("Renders the correct text", () => {
+    expect(screen.getByText(textTest)).toBeVisible();
   });
 
-  test("Check style", () => {
-    expect(screen.getByText("The Dark Knight")).toHaveStyle({
+  test("Applies the correct styles", () => {
+    expect(screen.getByText(textTest)).toHaveStyle({
       color: "#242424",
       fontFamily: "Gilroy-Medium",
-      fontSize: 14,
+      fontSize: 16,
       fontWeight: "400",
     });
   });
 
-  test("Check visibility", () => {
+  test("Should render image and be visible", () => {
     expect(screen.getByTestId("fast-image")).toBeVisible();
   });
 });

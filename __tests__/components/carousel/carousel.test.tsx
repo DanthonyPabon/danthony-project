@@ -5,30 +5,27 @@ import React from "react";
 
 import { colors, movieItem } from "../../../as-sources/source";
 
-describe("Carousel component test", () => {
+describe("Carousel component", () => {
+  const onPress = jest.fn();
+
   beforeEach(() => {
-    render(
-      <Carousel
-        colors={colors}
-        movies={[movieItem]}
-        onPress={() => jest.fn()}
-      />
-    );
+    render(<Carousel colors={colors} items={[movieItem]} onPress={onPress} />);
   });
 
-  test("Check press item", () => {
-    fireEvent.press(screen.getByTestId("press-item"));
-  });
-
-  test("Check style container", () => {
-    expect(screen.getByTestId("container-carousel")).toHaveStyle({
-      marginTop: 32,
-    });
-  });
-
-  test("Check flatlist", () => {
+  test("Should render a list of items", () => {
     expect(screen.getByTestId("flatlist-carousel").props.data).toEqual([
       movieItem,
     ]);
+  });
+
+  test("Should call the onPress function when an item is pressed", () => {
+    fireEvent.press(screen.getByTestId("press-item"));
+    expect(onPress).toHaveBeenCalled();
+  });
+
+  test("Applies the correct styles", () => {
+    expect(screen.getByTestId("container-carousel")).toHaveStyle({
+      marginTop: 32,
+    });
   });
 });

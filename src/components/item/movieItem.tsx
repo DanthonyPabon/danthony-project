@@ -32,7 +32,7 @@ const MovieItem = ({ urlImage, title, colors }: IMovieItem) => {
     <View style={styles.content}>
       {renderImage(urlImage)}
       <View style={{ marginTop: dimensions.generalTop }}>
-        <SubTitle colors={colors} txt={title} />
+        <SubTitle color={colors.textSubTitle}>{title}</SubTitle>
       </View>
     </View>
   );

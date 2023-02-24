@@ -9,12 +9,8 @@ const styles = StyleSheet.create({
   },
 });
 
-const Title = ({ txt, style, colors }: ITextProps) => {
-  return (
-    <Text style={[styles.titleStyle, style, { color: colors.textTitle }]}>
-      {txt}
-    </Text>
-  );
+const Title = ({ children, style, color = "black" }: ITextProps) => {
+  return <Text style={[styles.titleStyle, style, { color }]}>{children}</Text>;
 };
 
 export default Title;

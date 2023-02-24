@@ -1,5 +1,5 @@
-import Option from "components/text/option";
-import React from "react";
+import TextOption from "components/text/textOption";
+import React, { FunctionComponent } from "react";
 import { Pressable, StyleSheet } from "react-native";
 import dimensions from "styles/dimensions";
 import { IPillProps } from "types/components";
@@ -9,15 +9,20 @@ const styles = StyleSheet.create({
     alignSelf: "flex-start",
     borderRadius: 100,
     flexDirection: "row",
-    paddingHorizontal: dimensions.marginTwelve,
-    paddingVertical: dimensions.marginSix,
+    paddingHorizontal: dimensions.marginBo,
+    paddingVertical: dimensions.generalTop,
   },
 });
 
-const Pill = ({ title, colors, onPress, isFocused = false }: IPillProps) => {
+const Pill: FunctionComponent<IPillProps> = ({
+  title,
+  colors,
+  onPress = () => undefined,
+  isFocused = false,
+}) => {
   return (
     <Pressable
-      onPress={() => onPress(!isFocused ? title : "")}
+      onPress={() => onPress && onPress(!isFocused ? title : "")}
       style={[
         styles.container,
         {
@@ -28,7 +33,7 @@ const Pill = ({ title, colors, onPress, isFocused = false }: IPillProps) => {
       ]}
       testID="pill"
     >
-      <Option colors={colors} txt={title} />
+      <TextOption color={colors.textOption}>{title}</TextOption>
     </Pressable>
   );
 };

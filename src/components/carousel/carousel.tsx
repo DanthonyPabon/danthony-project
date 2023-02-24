@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
 });
 
 const Carousel: FunctionComponent<ICarouselProps> = ({
-  movies,
+  items,
   colors,
   onPress,
 }) => {
@@ -41,7 +41,7 @@ const Carousel: FunctionComponent<ICarouselProps> = ({
     <View style={styles.content} testID="container-carousel">
       <FlatList
         testID="flatlist-carousel"
-        data={movies}
+        data={items}
         renderItem={renderItem}
         keyExtractor={(item) => item.id.toString()}
         showsHorizontalScrollIndicator={false}
