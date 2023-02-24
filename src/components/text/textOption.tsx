@@ -9,10 +9,8 @@ const styles = StyleSheet.create({
   },
 });
 
-const Option = ({ txt, colors }: ITextProps) => {
-  return (
-    <Text style={[styles.titleStyle, { color: colors.textOption }]}>{txt}</Text>
-  );
+const TextOption = ({ children, color = "black" }: ITextProps) => {
+  return <Text style={[styles.titleStyle, { color }]}>{children}</Text>;
 };
 
-export default Option;
+export default TextOption;

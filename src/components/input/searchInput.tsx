@@ -1,5 +1,5 @@
 import SearchSVG from "assets/icons/search";
-import React, { useState } from "react";
+import React, { FunctionComponent, useState } from "react";
 import { StyleSheet, TextInput, View } from "react-native";
 import dimensions from "styles/dimensions";
 import { ISearchInput } from "types/components";
@@ -15,12 +15,12 @@ const styles = StyleSheet.create({
   },
 });
 
-const SearchInput = ({
+const SearchInput: FunctionComponent<ISearchInput> = ({
   colors,
   onChangeText,
   value,
   ...props
-}: ISearchInput) => {
+}) => {
   const [search, setSearch] = useState(value);
   return (
     <View

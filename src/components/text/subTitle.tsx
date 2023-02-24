@@ -9,12 +9,8 @@ const styles = StyleSheet.create({
   },
 });
 
-const SubTitle = ({ txt, colors }: ITextProps) => {
-  return (
-    <Text style={[styles.titleStyle, { color: colors.textSubTitle }]}>
-      {txt}
-    </Text>
-  );
+const SubTitle = ({ children, color = "black", style = {} }: ITextProps) => {
+  return <Text style={[styles.titleStyle, style, { color }]}>{children}</Text>;
 };
 
 export default SubTitle;
