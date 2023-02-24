@@ -44,6 +44,7 @@ module.exports = {
         "no-undef": "off",
         "prettier/prettier": "error",
         "arrow-body-style": "off",
+        "react-hooks/exhaustive-deps": "off",
         complexity: ["warn", { max: 4 }],
         "prefer-arrow-callback": "off",
         "sort-keys": "warn",

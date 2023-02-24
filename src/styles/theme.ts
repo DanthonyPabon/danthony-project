@@ -1,5 +1,5 @@
 import { DarkTheme, DefaultTheme, Theme } from "@react-navigation/native";
-import { Colors } from "styles/colors";
+import { Colors, Gradient } from "styles/colors";
 
 export interface IColors {
   colors: {
@@ -17,7 +17,10 @@ export interface IColors {
     textInput?: string;
     textOption?: string;
     textSubTitle?: string;
+    textRating?: string;
     textTitle?: string;
+    textGrey?: string;
+    gradientBackground: string[];
   };
 }
 
@@ -49,6 +52,7 @@ export const theme: ITheme = {
       buttonReverse: Colors.colorPrimary,
       card: Colors.black, // theme B
       error: Colors.lightRed,
+      gradientBackground: Gradient.gradientBlack,
       iconSearch: Colors.white,
       inputIcon: Colors.colorPrimary,
       notification: Colors.grey20, // theme B
@@ -58,8 +62,10 @@ export const theme: ITheme = {
       text: Colors.white, // theme B
       textButton: Colors.black,
       textButtonReverse: Colors.black,
+      textGrey: Colors.white,
       textInput: Colors.white,
       textOption: Colors.white,
+      textRating: Colors.yellow,
       textSubTitle: Colors.white,
       textTitle: Colors.white,
     },
@@ -76,6 +82,7 @@ export const theme: ITheme = {
       buttonReverse: Colors.colorPrimary,
       card: Colors.black, // theme B
       error: Colors.lightRed,
+      gradientBackground: Gradient.gradientWhite,
       iconSearch: Colors.black,
       inputIcon: Colors.colorPrimary,
       notification: Colors.blue, // theme B
@@ -85,8 +92,10 @@ export const theme: ITheme = {
       text: Colors.black, // theme B
       textButton: Colors.black,
       textButtonReverse: Colors.black,
+      textGrey: Colors.grey40,
       textInput: Colors.black,
       textOption: Colors.black,
+      textRating: Colors.yellow,
       textSubTitle: Colors.black,
       textTitle: Colors.black,
     },

@@ -1,7 +1,7 @@
 export const Colors = {
-  black: "#242424",
+  black: "#1c1c26",
   blue: "#2593B7",
-  colorPrimary: "#1FCF7C",
+  colorPrimary: "#ed8b2b",
   colorSecondary: "#3d3d3d",
   darkBlue: "#1F7793",
   darkRed: "#ff4256",
@@ -19,5 +19,26 @@ export const Colors = {
   red: "#ff4256",
   white: "#ffffff",
   white2: "#f8f8f8",
-  yellow: "#F7C663",
+  yellow: "#f7cc31",
+};
+
+export const Gradient = {
+  gradientBlack: [
+    "rgba(28,28,38,0)",
+    "rgba(28,28,38,0.26)",
+    "rgba(28,28,38,0.46)",
+    "rgba(28,28,38,0.66)",
+    "rgba(28,28,38,0.86)",
+    "rgba(28,28,38,0.96)",
+    "rgba(28,28,38,1)",
+  ],
+  gradientWhite: [
+    "rgba(256,256,256,0)",
+    "rgba(256,256,256,0.26)",
+    "rgba(256,256,256,0.46)",
+    "rgba(256,256,256,0.66)",
+    "rgba(256,256,256,0.86)",
+    "rgba(256,256,256,0.96)",
+    "rgba(256,256,256,1)",
+  ],
 };

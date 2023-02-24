@@ -8,16 +8,17 @@ import { IColors } from "styles/theme";
 import { IMovies } from "./api";
 
 export type FTranslate = TFunction;
+export type IFunction = () => void;
 export type IFunctionWith<T> = (item: T) => void;
 
-interface IThemColor {
-  colors: IColors["colors"] & Theme["colors"];
-}
-interface ITextStyle extends IThemColor {
+// General
+interface ITextStyle {
   style?: StyleProp<TextStyle>;
+  color?: string;
 }
-interface IViewStyles extends IThemColor {
+interface IViewStyles {
   styles?: StyleProp<ViewStyle>;
+  colors: IColors["colors"] & Theme["colors"];
 }
 
 export interface IUseTranslate {
@@ -26,30 +27,51 @@ export interface IUseTranslate {
   setI18n: i18n;
 }
 
-export interface IContainer extends IThemColor, IViewStyles {
+// Components complex
+export interface IContainer extends IViewStyles {
   children: React.ReactNode;
   withScroll?: boolean;
+  withoutSafeAreaTop?: boolean;
 }
 
-export interface ISearchInput extends TextInputProps, IThemColor {}
+export interface IPillProps extends IViewStyles {
+  title: string;
+  onPress?: IFunctionWith<string>;
+  isFocused?: boolean;
+}
 
-export interface IMovieItem extends IThemColor, IViewStyles {
+export interface IMovieItem extends IViewStyles {
   urlImage: string;
   title: string;
 }
 
-export interface ICarouselProps extends IThemColor {
-  movies: IMovies[];
+export interface ICarouselProps extends IViewStyles {
+  items: IMovies[];
   onPress: IFunctionWith<IMovies>;
 }
-export interface ITextProps extends ITextStyle {
-  txt: string;
+
+export interface ICarouselPillProps extends IViewStyles {
+  categories: string[];
+  searchCategory?: string;
+  onPress?: IFunctionWith<string>;
 }
 
-export interface IPillProps extends ITextStyle {
-  title: string;
-  onPress: IFunctionWith<string>;
-  isFocused?: boolean;
+export interface IButtonWithIcon {
+  icon?: JSX.Element;
+  onPress: IFunction;
+}
+
+export interface IHeaderMovie {
+  urlImage: string;
+  gradientBackground: string[];
+}
+
+export interface ISearchInput extends IViewStyles, TextInputProps {}
+
+// Simple Components
+
+export interface ITextProps extends ITextStyle {
+  children: string;
 }
 
 export interface IIconSearch extends SvgProps {
@@ -58,3 +80,10 @@ export interface IIconSearch extends SvgProps {
 }
 
 export type IProps = IUseTranslate;
+
+export interface INavigation {
+  key: string;
+  name: string;
+  params: IMovies;
+  path: string;
+}
