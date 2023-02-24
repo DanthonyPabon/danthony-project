@@ -3,6 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { darkModeProvider } from "providers/state-provider";
 import React, { useContext, useEffect } from "react";
 import { StatusBar } from "react-native";
+import DetailPage from "screens/detailPage";
 import HomePage from "screens/homePage";
 import { theme } from "styles/theme";
 import RouteNames from "utils/navigation";
@@ -21,10 +22,15 @@ export default function AppStack() {
 
   return (
     <NavigationContainer theme={theme[darkMode ? "dark" : "light"]}>
-      <Stack.Navigator>
+      <Stack.Navigator initialRouteName={RouteNames.HomePage}>
         <Stack.Screen
           name={RouteNames.HomePage}
           component={HomePage}
+          options={DefaultOptions}
+        />
+        <Stack.Screen
+          name={RouteNames.DetailPage}
+          component={DetailPage}
           options={DefaultOptions}
         />
       </Stack.Navigator>
