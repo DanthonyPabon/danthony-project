@@ -13,7 +13,6 @@ import { setThemeDark } from "providers/themeControl/actions";
 import React, { useContext, useEffect, useState } from "react";
 import { StyleSheet, Switch, View } from "react-native";
 import dataCategoriesMovies from "services/data-category.json";
-// import dataFavoritesMovies from "services/data-test-two.json";
 import dataMovies from "services/data-test.json";
 import MoviesApi from "services/movies";
 import dimensions from "styles/dimensions";
