@@ -12,12 +12,12 @@ export const typography = StyleSheet.create({
   },
   txtOption: {
     fontFamily: Fonts.medium,
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: "400",
   },
   txtSubTitle: {
     fontFamily: Fonts.medium,
-    fontSize: 14,
+    fontSize: 16,
     fontWeight: "400",
   },
   txtTitle: {
