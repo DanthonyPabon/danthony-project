@@ -5,18 +5,21 @@ import React from "react";
 
 import { colors } from "../../../as-sources/source";
 
-describe("Title text component test", () => {
+describe("Title component", () => {
+  const testText = "Latest Movie";
+  const testColor = colors.textTitle;
+
   beforeEach(() => {
-    render(<Title txt="Latest Movie" colors={colors} />);
+    render(<Title color={testColor}>{testText}</Title>);
   });
 
-  test("Check text", () => {
-    expect(screen.getByText("Latest Movie")).toBeVisible();
+  test("Renders the correct text", () => {
+    expect(screen.getByText(testText)).toBeVisible();
   });
 
-  test("Check style", () => {
-    expect(screen.getByText("Latest Movie")).toHaveStyle({
-      color: "#242424",
+  test("Applies the correct styles", () => {
+    expect(screen.getByText(testText)).toHaveStyle({
+      color: testColor,
       fontFamily: "Gilroy-Medium",
       fontSize: 20,
       fontWeight: "700",

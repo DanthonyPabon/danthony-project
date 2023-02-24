@@ -5,19 +5,21 @@ import React from "react";
 
 import { colors } from "../../../as-sources/source";
 
-describe("Search input component test", () => {
+describe("Search input component", () => {
   const testID = "search-input";
+  const testText = "Search movies...";
+
   beforeEach(() => {
-    render(<SearchInput placeholder={"Search movies..."} colors={colors} />);
+    render(<SearchInput placeholder={testText} colors={colors} />);
   });
 
-  test("Check text", () => {
+  test("Renders the correct text", () => {
     fireEvent.changeText(screen.getByTestId(testID), "The avengers");
-    screen.getByPlaceholderText("Search movies...");
+    screen.getByPlaceholderText(testText);
     expect(screen.getByTestId(testID).props.value).toBe("The avengers");
   });
 
-  test("Check style container input", () => {
+  test("Applies the correct styles", () => {
     expect(screen.getByTestId("container-input")).toHaveStyle({
       backgroundColor: "#ebebeb",
       borderRadius: 50,
@@ -26,7 +28,7 @@ describe("Search input component test", () => {
     });
   });
 
-  test("Check style input", () => {
+  test("Applies the correct styles in input", () => {
     expect(screen.getByTestId(testID)).toHaveStyle({
       color: "#242424",
       marginLeft: 8,
