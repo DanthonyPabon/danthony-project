@@ -70,7 +70,7 @@ Make sure an apropriate env file is present at the root, see CI/CD for how the p
 **Example .development.env file**
 
 ```
-DEVAPI_URL=https://imdb-top-100-movies.p.rapidapi.com/
+API_URL=https://imdb-top-100-movies.p.rapidapi.com/
 ```
 
 ### Branches notes
