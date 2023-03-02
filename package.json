@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
+    "android-dev": "ENVFILE=.env.development react-native run-android",
     "ios-dev": "yarn pre-commit && react-native run-ios —reset-cache --scheme \"development\"",
     "pod": "cd ios && npx pod-install",
     "start": "react-native start",
