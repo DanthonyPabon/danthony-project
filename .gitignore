@@ -49,8 +49,6 @@ buck-out
 .gradle
 local.properties
 *.iml
-/android/*
-!/android/README.md
 
 # Node
 node_modules
@@ -62,7 +60,6 @@ package-lock.json
 .DS_Store
 
 # Test generated files
-/ReactAndroid/src/androidTest/assets/AndroidTestBundle.js
 *.js.meta
 
 /coverage
