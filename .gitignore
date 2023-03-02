@@ -1,10 +1,9 @@
-# OSX
-#
-.DS_Store
-
 # Xcode
-#
-build/
+!**/*.xcodeproj
+!**/*.pbxproj
+!**/*.xcworkspacedata
+!**/*.xcsettings
+!**/*.xcscheme
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -20,52 +19,80 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
+project.xcworkspace
+**/.xcode.env.local
 ios/.xcode.env.local
 
-# Android/IntelliJ
-#
+# Gradle
 build/
+android/app/build/
+android/build/
+
+# Buck
+.buckd
+buck-out
+/.lsp.buckd
+/.lsp-buck-out
+/ReactAndroid/src/main/jni/prebuilt/lib/
+/ReactAndroid/src/main/gen
+
+# Android Studio
+.project
+.settings
+.classpath
+
+# Watchman
+.watchmanconfig
+
+# Android
 .idea
 .gradle
 local.properties
 *.iml
+/android/*
+!/android/README.md
+
+# Node
+node_modules
+*.log
+.nvm
+package-lock.json
+
+# OS X
+.DS_Store
+
+# Test generated files
+/ReactAndroid/src/androidTest/assets/AndroidTestBundle.js
+*.js.meta
+
+/coverage
+/third-party
+
+# Stack Dumps generated when programs crash (Ex. bash.exe.stackdump on Win)
+*.stackdump
+
+# Root dir shouldn't have Xcode project
+/*.xcodeproj
+
+# Ruby Gems (Bundler)
+/vendor
+vendor
+.ruby-version
+/**/.ruby-version
+
+# iOS / CocoaPods
+ios/build/
+ios/Pods/
+ios/Podfile.lock
+/packages/rn-tester/Gemfile.lock
+
+# Visual studio
+.vscode
+.vs
+
+# Android memory profiler files
 *.hprof
-.cxx/
 
-# node.js
-#
-node_modules/
-npm-debug.log
-yarn-error.log
-
-# BUCK
-buck-out/
-\.buckd/
-*.keystore
-!debug.keystore
-
-# fastlane
-#
-# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
-# screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/
-
-**/fastlane/report.xml
-**/fastlane/Preview.html
-**/fastlane/screenshots
-**/fastlane/test_output
-
-# Bundle artifact
-*.jsbundle
-
-# Ruby / CocoaPods
-/ios/Pods/
-/vendor/bundle/
-
-# react-native-config codegen
-ios/tmp.xcconfig
-
-# project
+# Temporary files created by Metro to check the health of the file watcher
+.metro-health-check*
 .env.development
-yarn.lock
