@@ -8,9 +8,9 @@ Mobile app
 - Homebrew (see https://brew.sh)
 - watchman - the latest stable version* 
 - cocoapods - the latest stable version* 
-- xcode 13
+- xcode 14
 - Java Development Kit 1.8
-- Android Studio - 2021.3.1
+- Android Studio - 2022.1.1 Patch 2
 - Android SDK Platform
 
 Follow this guide <https://reactnative.dev/docs/environment-setup>
@@ -22,6 +22,8 @@ Follow this guide <https://reactnative.dev/docs/environment-setup>
 ### yarn
 
 `lint` run the typescript compiler and the eslint showing warnings and errors.
+
+`android-dev` run app on android emulator and open it if it's not running
 
 `ios-dev` run app on ios emulator and open it if it's not running
 
