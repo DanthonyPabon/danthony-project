@@ -1,14 +1,16 @@
 import SearchSVG from "assets/icons/search";
 import React, { FunctionComponent, useState } from "react";
-import { StyleSheet, TextInput, View } from "react-native";
+import { Platform, StyleSheet, TextInput, View } from "react-native";
 import dimensions from "styles/dimensions";
 import { ISearchInput } from "types/components";
 
 const styles = StyleSheet.create({
   container: {
+    alignItems: "center",
     borderRadius: dimensions.radiusCircle,
     flexDirection: "row",
-    padding: dimensions.margin,
+    padding: Platform.OS === "android" ? 2 : dimensions.margin,
+    paddingLeft: dimensions.margin,
   },
   input: {
     marginLeft: dimensions.marginEight,
@@ -32,6 +34,7 @@ const SearchInput: FunctionComponent<ISearchInput> = ({
         style={[styles.input, { color: colors.text }]}
         selectionColor={colors.selectionColor}
         placeholderTextColor={colors.placeholderTextColor}
+        underlineColorAndroid="transparent"
         cursorColor={colors.primary}
         autoCapitalize="none"
         testID="search-input"

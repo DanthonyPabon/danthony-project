@@ -4,6 +4,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { EdgeInsets } from "react-native-safe-area-context/src/SafeArea.types";
 import dimensions from "styles/dimensions";
 import { IContainer } from "types/components";
+import { isAndroid } from "utils/devices";
 
 interface IDarkMode {
   backgroundColor: string;
@@ -40,13 +41,23 @@ const Container = ({
   return withScroll ? (
     <ScrollView
       style={[
-        style(safeAreaInsets, backgroundStyle, withoutSafeAreaTop).content,
+        style(
+          {
+            ...safeAreaInsets,
+            top: isAndroid ? dimensions.marginTopSpace : safeAreaInsets.top,
+          },
+          backgroundStyle,
+          withoutSafeAreaTop
+        ).content,
         styles,
       ]}
       contentContainerStyle={{ paddingBottom: safeAreaInsets.bottom * 3 }}
       testID="container-scroll"
     >
       {children}
+      {isAndroid && (
+        <View style={{ marginBottom: dimensions.marginBottomSpace }} />
+      )}
     </ScrollView>
   ) : (
     <View
